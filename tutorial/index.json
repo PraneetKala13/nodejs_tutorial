@@ -21,7 +21,8 @@
         },
         {
           "title": "Project setup",
-          "text": "project/text.md"
+          "text": "project/text.md",
+          "background": "project/setup.sh"
         },
         {
           "title": "ESLint with the security plugin for static analysis",
@@ -53,7 +54,7 @@
       },
       "assets": {
         "host01": [
-          {"file": "app/**/*.*", "target": "/root/app"}
+          {"file": "app/**/*.*", "target": "/root"}
         ]
       }
     },

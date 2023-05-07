@@ -2,12 +2,13 @@ ESLint with the security plugin for static analysis.
 
 ESLint is a tool that helps JavaScript developers write better code by finding and fixing common mistakes, enforcing consistent style, and preventing potential errors and security issues. Using ESLint can improve code quality and catch errors early, making it a valuable tool for any JavaScript developer.
 
-```plain
-npm install eslint eslint-plugin-security --save-dev ~
-```{{exec}}
+The required packages to use ESLint have already been installed since they are marked as DevDependencies in the package.json.
 
-something else
+You can take a look at the .eslintrc.json. It contains the configuration for ESLint, defining for example what style guide to use.
+Especially important is line 8 where the security plugin is loaded. It includes rules for static application security testing.
 
-```plain
-npx eslint --init ~
-```{{exec}}
+To run it you can use
+`pnpm eslint .`{{exec}}
+
+As you can see the project contains many errors and warnings. You can fix some of them
+`pnpm eslint --fix .`{{exec}}
