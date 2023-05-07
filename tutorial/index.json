@@ -33,6 +33,10 @@
             "text": "semgrep/text.md"
         },
         {
+            "title": "Warning",
+            "text": "semgrep/warning.md"
+        },
+        {
             "title": "PNPM Audit",
             "text": "audit/text.md"
         },

@@ -30,6 +30,7 @@ db.exec("CREATE TABLE IF NOT EXISTS users (username TEXT, password TEXT)");
 const stmt = db.prepare("INSERT INTO users (username, password) VALUES (?, ?)");
 //Set admin password to 123456
 stmt.run("admin", "password123");
+stmt.run("user", Math.random().toString(36).substring(7));
 
 router.get("/", async (ctx, next) => {
   const { user } = ctx.session;
@@ -51,10 +52,9 @@ router.get("/login", async (ctx, next) => {
 router.post("/auth", async (ctx, next) => {
   const { username, password } = ctx.request.body;
   const user = db
-    .prepare("SELECT * FROM users WHERE username = ?")
-    .get(username);
-
-  if (user && user.password === password) {
+    .prepare(`SELECT * FROM users WHERE username = '${username}' AND password = '${password}'`).get();
+    
+  if (user) {
     ctx.session.user = user;
     ctx.redirect("/dashboard");
   } else {

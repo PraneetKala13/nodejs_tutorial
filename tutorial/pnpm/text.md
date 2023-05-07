@@ -1,6 +1,16 @@
-In this step, it is necessary to install the Performance Node Package Manager (PNPM).
+To work with node.js at some point you will have to install packages.
 
-NPM is a command-line tool that helps Node.js developers easily install, manage, and share packages of code for their projects. It simplifies the process of managing dependencies and sharing code, making it a crucial tool for Node.js development.
+To do so there are three major package managers available:
+- npm
+- yarn
+- pnpm
+
+They are command-line tools that help Node.js developers easily install, manage, and share packages of code for their projects.
+
+A detailed comparison can be found [here](https://blog.logrocket.com/javascript-package-managers-compared/).
+As you will see PNPM (Performant Node Package Manager) has many advantages over npm and while yarn 2 is still not very widely adopted PNPM might be the best solution.
+
+To install PNPM you can use the following commands:
 
 ```
 curl -fsSL https://get.pnpm.io/install.sh | sh -

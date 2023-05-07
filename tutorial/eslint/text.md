@@ -1,4 +1,4 @@
-ESLint with the security plugin for static analysis.
+If you take a look at the code in the app.js file you might notice that it is not exactly written in a good style. To fix many o
 
 ESLint is a tool that helps JavaScript developers write better code by finding and fixing common mistakes, enforcing consistent style, and preventing potential errors and security issues. Using ESLint can improve code quality and catch errors early, making it a valuable tool for any JavaScript developer.
 
@@ -12,3 +12,8 @@ To run it you can use
 
 As you can see the project contains many errors and warnings. You can fix some of them
 `pnpm eslint --fix .`{{exec}}
+
+Run the command again and check what has to be fixed manually:
+`pnpm eslint .`{{exec}}
+
+This should be unnecessary variable declarations and some security warnings. Can you fix all of them?

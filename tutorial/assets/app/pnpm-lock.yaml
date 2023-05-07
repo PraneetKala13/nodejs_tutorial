@@ -57,6 +57,12 @@ devDependencies:
   eslint-plugin-security:
     specifier: ^1.7.1
     version: 1.7.1
+  eslint-plugin-security-node:
+    specifier: ^1.1.1
+    version: 1.1.1
+  eslint-plugin-sonarjs:
+    specifier: ^0.19.0
+    version: 0.19.0(eslint@8.40.0)
   jest:
     specifier: ^29.5.0
     version: 29.5.0
@@ -2113,10 +2119,24 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: true
 
+  /eslint-plugin-security-node@1.1.1:
+    resolution: {integrity: sha512-PXl5uKQOglpIpU13YIwWhhXK9Sw14KHbzCdVthDWoIsUPOuMYbrGOCWJSEVVuZ1uJK2ciN+45ogPeErrKtNm0Q==}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   /eslint-plugin-security@1.7.1:
     resolution: {integrity: sha512-sMStceig8AFglhhT2LqlU5r+/fn9OwsA72O5bBuQVTssPCdQAOQzL+oMn/ZcpeUY6KcNfLJArgcrsSULNjYYdQ==}
     dependencies:
       safe-regex: 2.1.1
+    dev: true
+
+  /eslint-plugin-sonarjs@0.19.0(eslint@8.40.0):
+    resolution: {integrity: sha512-6+s5oNk5TFtVlbRxqZN7FIGmjdPCYQKaTzFPmqieCmsU1kBYDzndTeQav0xtQNwZJWu5awWfTGe8Srq9xFOGnw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: 8.40.0
     dev: true
 
   /eslint-rule-composer@0.3.0:

@@ -4,7 +4,10 @@ Next go to the /app directory:
 
 You can find an example application and use the editor to see the app.js file.
 
-You can run it with
+Now you can use PNPM to install all the dependencies that are listed in the *package.json* file.
+`pnpm install`{{exec}}
+
+After that you should be able to run the application with
 `node src/app.js`{{exec}}
 
-This starts the application and you can see the webpage at {{TRAFFIC_HOST1_3000}}.
+You can see the webpage it runs [here]({{TRAFFIC_HOST1_3000}}).
