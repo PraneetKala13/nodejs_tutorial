@@ -1,0 +1,48 @@
+{
+    "title": "How to install node.js",
+    "description": "this tutorial show you how to setup a full node.js project with all the tools necessary to make development and deployment fast, easy and secure",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Create an empty file",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Create a file with text",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Delete a file",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        },
+        {
+            "title": "Delete a file",
+            "text": "step3/text.md",
+            "verify": "step3/verify.sh"
+        },
+        {
+            "title": "Delete a file",
+            "text": "step3/text.md",
+            "verify": "step3/verify.sh"
+        },
+        {
+            "title": "Delete a file",
+            "text": "step3/text.md",
+            "verify": "step3/verify.sh"
+          }
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+  }
