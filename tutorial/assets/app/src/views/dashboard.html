@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Dashboard</title>
-  </head>
-  <body>
-    <h1>Dashboard</h1>
-    <p>Welcome to the dashboard!</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Flask App</title>
+    <style>
+      /* CSS styles for the title and subtitle */
+      h1 {
+        text-align: center;
+        font-size: 4em;
+        margin-top: 50px;
+      }
+      h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 20px;
+      }
+	    #whale {
+        display: none;
+        white-space: pre;
+      }
+    </style>
+    <script>
+      function displayWhale(select) {
+        var select = document.getElementById("dropdown");
+        var whale = document.getElementById("whale");
+        if (select.value == "/sims/Aberlour") {          
+            whale.style.display = "block";
+        } else {
+            whale.style.display = "none";
+        }
+    }
+    </script>	  
+</head>
+<body>
+    <h1>DevOps2482</h1>
+    <h2>Whisky Comparitor</h2>
+    <div>
+        <select id="dropdown" name="list" onChange="window.location.href=this.value; displayWhale(this.value);">
+        <option selected>Choose a Whiskey</option>
+        {% for w in whiskeys %}
+        <option value="/sims/{{w}}">{{w}}</option>
+        {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <ol>{% for k,v in recommendations.items() %}<li><strong>{{k}}</strong> ({{v}})</li>{% endfor %}</ol>
+        <pre id="whale">
+          ##        .
+    ## ## ##       ==
+ ## ## ## ##      ===
+/""""""""""""""""\___/ ===
+{                       /  ===-
+\______ O           __/
+\    \         __/
+ \____\_______/
+        </pre>
+    </div>			
+</body>
 </html>
