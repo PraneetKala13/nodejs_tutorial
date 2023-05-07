@@ -13,4 +13,5 @@ Git comes pre-installed but it has to be set up.
 Configure it to use your name and email address:
 
 `git config --global user.name "<your name>"`
+
 `git config --global user.email "<your email>"`
