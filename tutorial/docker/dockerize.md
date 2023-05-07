@@ -2,7 +2,7 @@ Docker is a platform for building, shipping, and running applications using cont
 
 <br>
 
-Set up a dockerfile, which defines the configuration of a Docker image
+The first step is to set up a dockerfile, which defines the configuration of a Docker image
 
 ```plain
 nano Dockerfile
@@ -10,7 +10,7 @@ nano Dockerfile
 
 <br>
 
-Build the docker image and then run the image.
+Then you need to build the docker image and then run the image.
 
 ```plain
 docker build -t test .
