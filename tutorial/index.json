@@ -8,11 +8,11 @@
       },
       "steps": [
         {
-          "title": "Create an empty file",
+          "title": "Installing and using PNPM as the package manager",
           "text": "step1/text.md"
         },
         {
-          "title": "Create a file with text",
+          "title": "ESLint with the security plugin for static analysis",
           "text": "step2/text.md"
         },
         {
@@ -30,7 +30,7 @@
         {
             "title": "Delete a file",
             "text": "step3/text.md"
-          }
+        }
       ],
       "finish": {
         "text": "finish.md"
