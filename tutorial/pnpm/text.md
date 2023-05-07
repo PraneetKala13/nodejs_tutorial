@@ -11,3 +11,8 @@ You can check the installation with
 ```plain
 pnpm -v
 ```{{exec}}
+
+Node.js is already preinstalled. You can make sure it is working with
+```plain
+node -v
+```{{exec}}

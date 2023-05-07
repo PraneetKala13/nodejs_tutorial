@@ -1,6 +1,6 @@
 {
-    "title": "How to install node.js",
-    "description": "this tutorial show you how to setup a full node.js project with all the tools necessary to make development and deployment fast, easy and secure",
+    "title": "How to setup a node.js project",
+    "description": "This tutorial shows you how to setup a full node.js project with all the tools necessary to make development and deployment fast, easy and secure.",
     "details": {
       "intro": {
         "text": "intro.md",
@@ -8,35 +8,55 @@
       },
       "steps": [
         {
-          "title": "Installing and using PNPM as the package manager",
-          "text": "step1/text.md"
+          "title": "Setting up git",
+          "text": "git/setup.md"
+        },
+        {
+          "title": "Setting up git",
+          "text": "git/signed_commits.md"
+        },
+        {
+          "title": "Installing PNPM",
+          "text": "pnpm/text.md"
+        },
+        {
+          "title": "Project setup",
+          "text": "project/text.md"
         },
         {
           "title": "ESLint with the security plugin for static analysis",
-          "text": "step2/text.md"
-        },
-        {
-          "title": "Delete a file",
-          "text": "step3/text.md"
+          "text": "eslint/text.md"
         },
         {
             "title": "Semgrep as an additional SAST scanner",
-            "text": "step4/text.md"
+            "text": "semgrep/text.md"
         },
         {
-            "title": "Delete a file",
-            "text": "step5/text.md"
+            "title": "PNPM Audit",
+            "text": "audit/text.md"
         },
         {
-            "title": "identifying vulnerabilities",
-            "text": "step6/text.md"
+            "title": "PNPM Licenses",
+            "text": "licenses/text.md"
+        },
+        {
+            "title": "Hard-coded secrets",
+            "text": "secrets/text.md"
         }
       ],
       "finish": {
         "text": "finish.md"
+      },
+      "assets": {
+        "host01": [
+          {"file": "app/**/*.*", "target": "/root/app"}
+        ]
       }
     },
     "backend": {
       "imageid": "ubuntu"
+    },
+    "interface": {
+      "layout": "ide"
     }
   }
