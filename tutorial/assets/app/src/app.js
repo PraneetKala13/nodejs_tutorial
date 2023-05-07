@@ -6,6 +6,8 @@ const bodyParser = require("koa-bodyparser");
 const views = require("koa-views");
 const path = require("path");
 const sqlite = require("better-sqlite3");
+const DataFrame = require('pandas-js');
+const Matrix = require('ml-matrix');
 
 const app = new Koa();
 const router = new Router();
@@ -71,6 +73,37 @@ app.use(serve(path.join(__dirname, "public")));
 
 // Use the router middleware
 app.use(router.routes());
+
+// Load data
+const df = new DataFrame.fromCSV('scotch.csv', { separator: ';' });
+
+// Create cosine similarity model
+const distances = new Matrix(df.values).cosineSimilarity();
+const simdf = new DataFrame(distances, df.index, df.index);
+
+function getSimScotch(name) {
+  // Pick out the top 5 most similar scotches (exclude the first one, which is the scotch itself)
+  const simScores = simdf.get(name).sort('descending').iloc(1, 6);
+  const recommendations = {};
+  for (const [i, score] of simScores.entries()) {
+    recommendations[df.get(i, 'NAME')] = score.toFixed(2);
+  }
+  return recommendations;
+}
+
+app.get('/', (req, res) => {
+  res.render('dashboard', { whiskeys: df.get('NAME').values, recommendations: {} });
+});
+
+app.get('/sims/:brand', (req, res) => {
+  const brand = req.params.brand;
+  if (df.get('NAME').values.includes(brand)) {
+    const results = getSimScotch(brand);
+    res.render('dashboard', { whiskeys: df.get('NAME').values, recommendations: results });
+  } else {
+    res.render('dashboard', { whiskeys: df.get('NAME').values, recommendations: { "Something": "went wrong in the sims method" } });
+  }
+});
 
 // Start the server
 app.listen(3000, () => {
