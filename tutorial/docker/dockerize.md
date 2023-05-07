@@ -1,8 +1,23 @@
 Docker is a platform for building, shipping, and running applications using containers, which are lightweight, self-contained packages that contain all the necessary code and dependencies.
 
-The example project comes with a pre-configured Dockerfile that you can use to build an image. Take a look at it.
+To create a docker image you need a Dockerfile defining what base image to use and which commands to run.
+Create a new file in the app directory with the name "Dockerfile".
+Here is a template for the file:
+```
+FROM node:lts
+RUN curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+WORKDIR /usr/src/app
+RUN chown node:node .
+USER node
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm fetch --prod
+COPY ./src ./src
+RUN pnpm install -r --offline -P
+EXPOSE 3000
+CMD node ./src/app.js
+```
 
-You can build the image like this:
+You can then build the image like this:
 ```plain
 docker build -t test .
 ```{{exec}}

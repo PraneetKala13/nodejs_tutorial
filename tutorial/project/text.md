@@ -15,13 +15,14 @@ You can see the webpage it runs [here]({{TRAFFIC_HOST1_3000}}).
 The project however is not a git repository yet. So run
 ```
 git init
-```{{exec}}
+```{{exec interrupt}}
 
 If you would add all files now this would include the node_modules. To make sure these stay out of your commit create a new .gitignore file and list node_modules:
 ```
 echo "node_modules" > .gitignore
 ```{{exec}}
 
+To commit the changes you will need the password you set for your GPG key.
 ```
 git add .
 git commit -m "Initial commit"
