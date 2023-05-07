@@ -20,16 +20,16 @@
           "text": "step3/text.md"
         },
         {
-            "title": "Delete a file",
-            "text": "step3/text.md"
+            "title": "Semgrep as an additional SAST scanner",
+            "text": "step4/text.md"
         },
         {
             "title": "Delete a file",
-            "text": "step3/text.md"
+            "text": "step5/text.md"
         },
         {
-            "title": "Delete a file",
-            "text": "step3/text.md"
+            "title": "identifying vulnerabilities",
+            "text": "step6/text.md"
         }
       ],
       "finish": {
