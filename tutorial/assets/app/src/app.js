@@ -3,11 +3,9 @@ const Router = require("@koa/router");
 const serve = require("koa-static");
 const session = require("koa-session");
 const bodyParser = require("koa-bodyparser");
-const views = require("koa-views");
 const path = require("path");
 const sqlite = require("better-sqlite3");
 const { parse } = require("csv-parse");
-const { readFileSync, createReadStream } = require("fs");
 const loadCSV = require("./load_csv");
 const { readFile } = require("fs/promises");
 
@@ -22,7 +20,7 @@ app.use(session(app));
 app.use(bodyParser())
 
 // Initialize the SQLite database
-const db = sqlite(path.join(__dirname, "database.sqlite"));
+const db = sqlite("database.sqlite");
 
 db.exec("CREATE TABLE IF NOT EXISTS users (username TEXT, password TEXT)");
 
@@ -42,18 +40,18 @@ router.get("/", async (ctx, next) => {
 });
 
 // Define the login route
-router.get("/login", async (ctx, next) => {
+router.get("/login", async (ctx) => {
   const login = await readFile(path.join(__dirname, "views/login.html"), "utf8");
   ctx.set("Content-Type", "text/html");
   ctx.body = login;
 });
 
 // Define the authentication route
-router.post("/auth", async (ctx, next) => {
+router.post("/auth", async (ctx) => {
   const { username, password } = ctx.request.body;
   const user = db
     .prepare(`SELECT * FROM users WHERE username = '${username}' AND password = '${password}'`).get();
-    
+
   if (user) {
     ctx.session.user = user;
     ctx.redirect("/dashboard");
@@ -63,7 +61,7 @@ router.post("/auth", async (ctx, next) => {
 });
 
 // Define the dashboard route
-router.get("/dashboard", async (ctx, next) => {
+router.get("/dashboard", async (ctx) => {
   const { user } = ctx.session;
   if (!user) {
     ctx.redirect("/login");
@@ -80,7 +78,7 @@ app.use(serve(path.join(__dirname, "public")));
 
 console.log("Loading CSV...");
 loadCSV().then((res) => {
-  router.get("/data", async (ctx, next) => {
+  router.get("/data", async (ctx) => {
     const { user } = ctx.session;
     if (!user) {
       ctx.unauthorized();

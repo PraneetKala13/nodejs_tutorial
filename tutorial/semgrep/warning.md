@@ -6,6 +6,8 @@ You HAVE to make sure yourself that you write secure code!
 Did you notice the SQL injection vulnerability in the application?
 ESLint and Semgrep didn't.
 
-Try logging in with the username `admin';--` and any password.
+Start the application again with
+`node src/app.js`{{exec}}.
+Then try logging in with the username `admin';--` and any password.
 
 Can you fix it?

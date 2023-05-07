@@ -9,6 +9,7 @@ const loadCSV = async () => {
 
   const parser = csvStream.pipe(parse({columns: true}));
 
+  // eslint-disable-next-line no-restricted-syntax
   for await (const record of parser) {
     records.push(record);
   }

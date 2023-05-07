@@ -6,3 +6,4 @@ It can be easily run in a docker container and you can use it in addition to ESL
 docker run --rm -v "${PWD}:/src" returntocorp/semgrep semgrep --config=auto
 ```{{exec}}
 
+In our case it doesn't find any warnings or errors.

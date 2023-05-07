@@ -13,7 +13,4 @@ To run it you can use
 As you can see the project contains many errors and warnings. You can fix some of them
 `pnpm eslint --fix .`{{exec}}
 
-Run the command again and check what has to be fixed manually:
-`pnpm eslint .`{{exec}}
-
-This should be unnecessary variable declarations and some security warnings. Can you fix all of them?
+Some remain to be fixed manually however. These should be unnecessary variable declarations and some (security) warnings. Can you fix all of them?

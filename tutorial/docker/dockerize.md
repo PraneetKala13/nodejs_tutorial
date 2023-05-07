@@ -1,38 +1,15 @@
 Docker is a platform for building, shipping, and running applications using containers, which are lightweight, self-contained packages that contain all the necessary code and dependencies.
 
-<br>
+The example project comes with a pre-configured Dockerfile that you can use to build an image. Take a look at it.
 
-The first step is to set up a dockerfile, which defines the configuration of a Docker image
-
-```plain
-nano Dockerfile
-```{{exec}}
-
-Then you need to build the docker image and then run the image.
-
+You can build the image like this:
 ```plain
 docker build -t test .
-docker run -it test
 ```{{exec}}
 
+Then run it like this:
+```plain
+docker run -itd --rm --name test -p 3000:3000 test
+```{{exec}}
 
-### Example of Dockerfile text
-We can use the following docker code to create and run a docker image:
-
-# Dockerfile content
-FROM openjdk:11
-
-# Copy application files
-COPY . /usr/src/myapp
-
-# Set working directory
-WORKDIR /usr/src/myapp
-
-# Run Java App
-RUN javac Main.java
-
-# Expose port
-EXPOSE 80
-
-# Define command to start application
-CMD ["java", "Main"]
+Now when you visit the [public URL]({{TRAFFIC_HOST1_3000}}) again you should see the application running but this time in a docker container. You can use this image to easily deploy your application to any cloud provider.

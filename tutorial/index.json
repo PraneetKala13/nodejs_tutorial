@@ -42,7 +42,8 @@
         },
         {
             "title": "PNPM Licenses",
-            "text": "licenses/text.md"
+            "text": "licenses/text.md",
+            "background": "licenses/setup.sh"
         },
         {
             "title": "Hard-coded secrets",
