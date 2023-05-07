@@ -8,8 +8,6 @@ The first step is to set up a dockerfile, which defines the configuration of a D
 nano Dockerfile
 ```{{exec}}
 
-<br>
-
 Then you need to build the docker image and then run the image.
 
 ```plain
