@@ -14,4 +14,6 @@ In this tutorial, you will learn how to set up a complete node.js project from s
 The tutorial does not try to automate these things. Instead the goal is for the user to gain some understanding of what different steps in DevOps are, how they make life better and easier and why they should be used when it comes to security.
 By the end of this tutorial, you will have a solid understanding of how to create a project on node.js and be able to apply and analyse for dependencies and vulnerabilities to your applications.
 
+<img src="./img/nodejs.jpg" width="600" height="250">
+
 Let's get started!
