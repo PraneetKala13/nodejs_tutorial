@@ -1,6 +1,8 @@
 # Setting up a complete node.js project from scratch
 
-In this tutorial, you will learn how to set up a complete node.js project from scratch that uses:
+In this tutorial, you will learn how to set up a complete node.js project from scratch. Node.js is a Javascript runtime environment for server-side execution of Javascript code, enabling the use of one language for front-end and back-end development, resulting in scalable web applications.
+
+# Learning Outcomes 
 
 * PNPM as a package manager
 * Git and signed commits for source code management
