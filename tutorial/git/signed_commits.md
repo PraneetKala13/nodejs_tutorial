@@ -27,7 +27,7 @@ ssb   rsa3072/B34B6358 2023-05-07 [E]
 The ID of the key in this case is BD4D017B. 
 
 Next configure git to use that key:
-`git config --global user.signingkey <KEY_ID>`
+```git config --global user.signingkey <KEY_ID>```
 
 Then activate the automatic signing:
-`git config --global commit.gpgsign true`{{exec}}
+```git config --global commit.gpgsign true```{{exec}}
