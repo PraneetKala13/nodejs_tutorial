@@ -3,7 +3,7 @@ PNPM has another feature: It can list all the dependencies' licenses.
 This is important if you want to make sure you are not violating any license restrictions.
 You can use 
 ```plain
-pnpm licenses ls"
+pnpm licenses ls
 ```{{exec}}
 to list all packages with their licenses.
 

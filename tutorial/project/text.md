@@ -11,3 +11,18 @@ After that you should be able to run the application with
 `node src/app.js`{{exec}}
 
 You can see the webpage it runs [here]({{TRAFFIC_HOST1_3000}}).
+
+The project however is not a git repository yet. So run
+```
+git init
+```{{exec}}
+
+If you would add all files now this would include the node_modules. To make sure these stay out of your commit create a new .gitignore file and list node_modules:
+```
+echo "node_modules" > .gitignore
+```{{exec}}
+
+```
+git add .
+git commit -m "Initial commit"
+```{{exec}}

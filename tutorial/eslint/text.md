@@ -14,3 +14,14 @@ As you can see the project contains many errors and warnings. You can fix some o
 `pnpm eslint --fix .`{{exec}}
 
 Some remain to be fixed manually however. These should be unnecessary variable declarations and some (security) warnings. Can you fix all of them?
+
+After you fixed them commit your changes by running
+```
+git commit -am "Fixing eslint warnings"
+```{{exec}}
+
+You can use 
+```
+git log --show-signature
+```{{exec}}
+to see the signed commit.
