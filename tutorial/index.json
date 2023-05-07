@@ -20,6 +20,10 @@
           "text": "pnpm/text.md"
         },
         {
+          "title": "Installing and running Docker",
+          "text": "docker/dockerize.md"
+        },
+        {
           "title": "Project setup",
           "text": "project/text.md"
         },
