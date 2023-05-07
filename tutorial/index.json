@@ -20,10 +20,6 @@
           "text": "pnpm/text.md"
         },
         {
-          "title": "Installing and running Docker",
-          "text": "docker/dockerize.md"
-        },
-        {
           "title": "Project setup",
           "text": "project/text.md"
         },
@@ -46,6 +42,10 @@
         {
             "title": "Hard-coded secrets",
             "text": "secrets/text.md"
+        },
+        {
+          "title": "Dockerizing tha application",
+          "text": "docker/dockerize.md"
         }
       ],
       "finish": {
