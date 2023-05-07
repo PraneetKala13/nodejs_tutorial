@@ -22,7 +22,7 @@
         {
           "title": "Project setup",
           "text": "project/text.md",
-          "background": "project/setup.sh"
+          "foreground": "project/setup.sh"
         },
         {
           "title": "ESLint with the security plugin for static analysis",
@@ -43,7 +43,7 @@
         {
             "title": "PNPM Licenses",
             "text": "licenses/text.md",
-            "background": "licenses/setup.sh"
+            "foreground": "licenses/setup.sh"
         },
         {
             "title": "Hard-coded secrets",
