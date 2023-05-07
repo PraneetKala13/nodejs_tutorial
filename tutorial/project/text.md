@@ -2,12 +2,9 @@ Next go to the /app directory:
 
 `cd app`{{exec}}
 
-There, you will find an application that runs a whisky comparitor.
+You can find an example application and use the editor to see the app.js file.
 
-To view the current file use:
+You can run it with
+`node src/app.js`{{exec}}
 
-```
-view app.py
-```{{exec}}
-
-
+This starts the application and you can see the webpage at {{TRAFFIC_HOST1_3000}}.
