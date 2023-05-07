@@ -1,4 +1,6 @@
-The tutorial will aim to demonstrate how to set up a complete project from scratch that uses:
+# Setting up a complete node.js project from scratch
+
+In this tutorial, you will learn how to set up a complete node.js project from scratch that uses:
 
 * PNPM as a package manager
 * Git and signed commits for source code management
@@ -10,3 +12,6 @@ The tutorial will aim to demonstrate how to set up a complete project from scrat
 * Docker to package and deploy the application
 
 The tutorial does not try to automate these things. Instead the goal is for the user to gain some understanding of what different steps in DevOps are, how they make life better and easier and why they should be used when it comes to security.
+By the end of this tutorial, you will have a solid understanding of how to create a project on node.js and be able to apply and analyse for dependencies and vulnerabilities to your applications.
+
+Let's get started!
