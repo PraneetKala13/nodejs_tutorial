@@ -1,4 +1,4 @@
-If you take a look at the code in the app.js file you might notice that it is not exactly written in a good style. To fix many o
+If you take a look at the code in the app.js file you might notice that it is not exactly written in a good style.
 
 ESLint is a tool that helps JavaScript developers write better code by finding and fixing common mistakes, enforcing consistent style, and preventing potential errors and security issues. Using ESLint can improve code quality and catch errors early, making it a valuable tool for any JavaScript developer.
 

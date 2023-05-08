@@ -13,11 +13,13 @@
         },
         {
           "title": "Setting up git",
-          "text": "git/signed_commits.md"
+          "text": "git/signed_commits.md",
+          "verify": "git/verify.sh"
         },
         {
           "title": "Installing PNPM",
-          "text": "pnpm/text.md"
+          "text": "pnpm/text.md",
+          "verify": "pnpm/verify.sh"
         },
         {
           "title": "Project setup",
@@ -42,8 +44,7 @@
         },
         {
             "title": "PNPM Licenses",
-            "text": "licenses/text.md",
-            "foreground": "licenses/setup.sh"
+            "text": "licenses/text.md"
         },
         {
             "title": "Hard-coded secrets",

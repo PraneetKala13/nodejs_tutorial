@@ -1,5 +1,9 @@
 # Identify vulnerabilities in packages
 
+Keeping your dependencies up to date is one of the best things you can do when it comes to security.
+While an attacker of course can try to find vulnerabilities in your application, it is much easier to scan for known
+vulnerabilities in packages you might be using.
+
 PNPM includes a built-in audit tool that can be used to scan installed packages for vulnerabilities. To run an audit, simply run the following command:
 
 ```plain
@@ -19,3 +23,5 @@ This fixes the version in the package.json. You can then run
 pnpm install
 ```{{exec}}
 again to install the updated package.
+
+In production you should use a tool like [renovate](https://github.com/renovatebot/renovate) to automatically create pull requests to your repo for version updates.
